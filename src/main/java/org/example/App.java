@@ -37,6 +37,9 @@ public class App {
         searchBox.click();
         searchBox.sendKeys("CLS" + Keys.ENTER);
 
+        By searchResultsLocator = By.cssSelector("devsite-content a[href=\"https://web.dev/articles/cls\"]");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(searchResultsLocator));
+
         endTimespan(timeSpanProcess);
 
         driver.close();
