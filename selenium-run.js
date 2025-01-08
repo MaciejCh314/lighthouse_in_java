@@ -22,7 +22,7 @@ const rl = readline.createInterface({
 });
 
 const browser = await puppeteer.connect({
-    browserURL: `http://localhost:${port}`,
+    browserURL: `http://127.0.0.1:${port}`,
   });
 
 const page = await browser.newPage();
